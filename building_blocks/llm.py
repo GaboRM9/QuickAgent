@@ -6,9 +6,9 @@ import os
 load_dotenv()
 
 def batch():
-    chat = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768", groq_api_key=os.getenv("GROQ_API_KEY"))
+    chat = ChatGroq(temperature=0, model_name="gemma-7b-It", groq_api_key=os.getenv("GROQ_API_KEY"))
 
-    system = "You are a helpful assistant."
+    system = "Your are a helpful assistant"
     human = "{text}"
     prompt = ChatPromptTemplate.from_messages([("system", system), ("human", human)])
 
